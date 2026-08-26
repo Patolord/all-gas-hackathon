@@ -9,6 +9,7 @@
  */
 
 import type * as counter from "../counter.js";
+import type * as http from "../http.js";
 import type * as staticHosting from "../staticHosting.js";
 
 import type {
@@ -19,6 +20,7 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   counter: typeof counter;
+  http: typeof http;
   staticHosting: typeof staticHosting;
 }>;
 
@@ -50,4 +52,6 @@ export declare const internal: FilterApi<
 
 export declare const components: {
   staticHosting: import("@convex-dev/static-hosting/_generated/component.js").ComponentApi<"staticHosting">;
+  firecrawl: import("@firecrawl/firecrawl-convex/_generated/component.js").ComponentApi<"firecrawl">;
+  agentmail: import("@agentmail/convex/_generated/component.js").ComponentApi<"agentmail">;
 };

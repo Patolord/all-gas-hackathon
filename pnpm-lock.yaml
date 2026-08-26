@@ -216,12 +216,18 @@ importers:
 
   .:
     dependencies:
+      '@agentmail/convex':
+        specifier: ^0.1.0
+        version: 0.1.0(convex-helpers@0.1.123(@standard-schema/spec@1.1.0)(convex@1.45.0(react@19.2.8))(hono@4.12.33)(react@19.2.8)(typescript@6.0.3)(zod@3.25.76))(convex@1.45.0(react@19.2.8))
       '@base-ui/react':
         specifier: ^1.6.0
         version: 1.6.0(@date-fns/tz@1.5.0)(@types/react@19.2.18)(date-fns@4.4.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@convex-dev/static-hosting':
         specifier: ^0.2.1
         version: 0.2.1(convex@1.45.0(react@19.2.8))(react@19.2.8)
+      '@firecrawl/firecrawl-convex':
+        specifier: ^0.1.1
+        version: 0.1.1(@standard-schema/spec@1.1.0)(convex@1.45.0(react@19.2.8))(hono@4.12.33)(react@19.2.8)(typescript@6.0.3)(zod@3.25.76)
       '@fontsource-variable/geist':
         specifier: ^5.3.0
         version: 5.3.0
@@ -309,6 +315,12 @@ importers:
         version: 0.2.7(@types/node@26.1.2)(@voidzero-dev/vite-plus-core@0.2.7(@types/node@26.1.2)(esbuild@0.27.0)(jiti@2.7.0)(typescript@6.0.3))(esbuild@0.27.0)(jiti@2.7.0)(typescript@6.0.3)
 
 packages:
+
+  '@agentmail/convex@0.1.0':
+    resolution: {integrity: sha512-pqfIBX/XObWqC9M3sqh0Jy8KGOtQzpC0plZok3mJye0ZmEOuo5BZbG6diihjeIzBOEQblnagO9C+IX6+uQNfvg==}
+    peerDependencies:
+      convex: ^1.24.8
+      convex-helpers: ^0.1.106
 
   '@babel/code-frame@7.29.7':
     resolution: {integrity: sha512-Aup7aUOfpbAUg2ROOJN6Iw5f9DMBlzu0mIkm/malLQFN/YQgO48wCj0Kxa3sEHJvPVFg7siR+qRInwXd2qhQKw==}
@@ -480,6 +492,12 @@ packages:
       convex: ^1.37.0
       react: ^18.3.1 || ^19.0.0
 
+  '@convex-dev/workpool@0.3.2':
+    resolution: {integrity: sha512-jNPBHLCmZQXaztbBntZgIoM8JhKDmGwaIezZS/zPmX74PzON0Fgysgd9u+NOjJ04Dx2pN8ppBH9ElpsKxCOBpA==}
+    peerDependencies:
+      convex: ^1.31.7
+      convex-helpers: ^0.1.94
+
   '@date-fns/tz@1.5.0':
     resolution: {integrity: sha512-lwYN/vDPeNRULcepoE/LO2Pgx+7/RV+S9ARfbc9lr2DtGkOD7pAiruHvbR1RX3Qyf6ja47EWJDMsNK5vK08DJg==}
 
@@ -645,6 +663,11 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@firecrawl/firecrawl-convex@0.1.1':
+    resolution: {integrity: sha512-fecepodOAcKLUKFD+4dyqRfU8ATn3y15nYtayyAmmQAV0FT/6sVwKNY0+rpq8/NKTLrEpuHr+cE0htNQ+ssU+g==}
+    peerDependencies:
+      convex: ^1.43.0
 
   '@floating-ui/core@1.8.0':
     resolution: {integrity: sha512-0CIZ5itps/8x7BG8dEIhs53BvCUH2PCoogtakwRTut+Arm58sJooJ0AuZhLw2HJYIR5cMLNPBSS728sPho2khQ==}
@@ -1189,6 +1212,9 @@ packages:
   '@sindresorhus/merge-streams@4.0.0':
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
+
+  '@stablelib/base64@1.0.1':
+    resolution: {integrity: sha512-1bnPQqSxSuc3Ii6MhBysoWCg58j97aUjuCSZrGSmDxNqtytIi0k8utUenAwTZN4V5mXXYGsVUI9zeBqy+jBOSQ==}
 
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
@@ -1814,6 +1840,28 @@ packages:
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
 
+  convex-helpers@0.1.123:
+    resolution: {integrity: sha512-E9W4tscZy6ZtNnwPDdL5UhMc7Rj9aUYlzjdYiKsfVIAwdarABWqvPB8+St3Q6IwS83r+QIGSO1lTidTamDdyPQ==}
+    hasBin: true
+    peerDependencies:
+      '@standard-schema/spec': ^1.0.0
+      convex: ^1.43.0
+      hono: ^4.0.5
+      react: ^17.0.2 || ^18.0.0 || ^19.0.0
+      typescript: ^5.5 || ^6.0.0 || ^7.0.0
+      zod: ^3.25.0 || ^4.0.0
+    peerDependenciesMeta:
+      '@standard-schema/spec':
+        optional: true
+      hono:
+        optional: true
+      react:
+        optional: true
+      typescript:
+        optional: true
+      zod:
+        optional: true
+
   convex@1.45.0:
     resolution: {integrity: sha512-AV3B56Ptu/14d76g3urBJ50dwpiZa6uJaLT84OWox5aCwZIJiuAamdjv3lLHDzs8vv5kC31anEZohhUe3qJ2bA==}
     engines: {node: '>=20.0.0', npm: '>=7.0.0'}
@@ -2113,6 +2161,9 @@ packages:
   fast-glob@3.3.3:
     resolution: {integrity: sha512-7MptL8U0cqcFdzIzwOTHoilX9x5BrNqye7Z/LuC7kCMRio1EMSyqRK3BEAUD7sXRq4iT4AzTVuZdhgQ2TCvYLg==}
     engines: {node: '>=8.6.0'}
+
+  fast-sha256@1.3.0:
+    resolution: {integrity: sha512-n11RGP/lrWEFI/bWdygLxhI+pVeo1ZYIVwvvPkW7azl/rOy+F3HYRZ2K5zeE9mmkhQppyv9sQFx0JM9UabnpPQ==}
 
   fast-uri@3.1.5:
     resolution: {integrity: sha512-gHwA1O9LDIcKunMKhObS/HimwtehO1nPUECKAu5TpKgaO19fcWEl4bliWe1jWxVFvIXztJjjQ4L8XQ1EU9f7Jw==}
@@ -3070,6 +3121,9 @@ packages:
   stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
 
+  standardwebhooks@1.0.0:
+    resolution: {integrity: sha512-BbHGOQK9olHPMvQNHWul6MYlrRTAOKn03rOe4A8O3CLWhNf4YHBqq2HJKKC+sfqpxiBY52pNeesD6jIiLDz8jg==}
+
   statuses@2.0.2:
     resolution: {integrity: sha512-DvEy55V3DB7uknRo+4iOGT5fP1slR8wQohVdknigZPMpMstaKJQWhwiYBACJE3Ul2pTnATihhBYnRhZQHGBiRw==}
     engines: {node: '>= 0.8'}
@@ -3112,6 +3166,9 @@ packages:
   supports-color@5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
     engines: {node: '>=4'}
+
+  svix@1.99.1:
+    resolution: {integrity: sha512-JfpvbAg5iT5NagDAfOq3e6Ci6NbOMbMm6C3DnfDBB60m2JDK+Z2hXPE9XNAmutb53DCdPoih1V70IbklZnX09A==}
 
   systeminformation@5.33.1:
     resolution: {integrity: sha512-DEN6ICHk3Tk0Uf/hrAHh7xlt7iL5CJFBtPZinA0H62DrGG/KPKqq/Nzj6lCXPS4Ay/sf/14zNnk9LpqKzBIc+w==}
@@ -3376,6 +3433,13 @@ packages:
 
 snapshots:
 
+  '@agentmail/convex@0.1.0(convex-helpers@0.1.123(@standard-schema/spec@1.1.0)(convex@1.45.0(react@19.2.8))(hono@4.12.33)(react@19.2.8)(typescript@6.0.3)(zod@3.25.76))(convex@1.45.0(react@19.2.8))':
+    dependencies:
+      '@convex-dev/workpool': 0.3.2(convex-helpers@0.1.123(@standard-schema/spec@1.1.0)(convex@1.45.0(react@19.2.8))(hono@4.12.33)(react@19.2.8)(typescript@6.0.3)(zod@3.25.76))(convex@1.45.0(react@19.2.8))
+      convex: 1.45.0(react@19.2.8)
+      convex-helpers: 0.1.123(@standard-schema/spec@1.1.0)(convex@1.45.0(react@19.2.8))(hono@4.12.33)(react@19.2.8)(typescript@6.0.3)(zod@3.25.76)
+      svix: 1.99.1
+
   '@babel/code-frame@7.29.7':
     dependencies:
       '@babel/helper-validator-identifier': 7.29.7
@@ -3596,6 +3660,11 @@ snapshots:
       convex: 1.45.0(react@19.2.8)
       react: 19.2.8
 
+  '@convex-dev/workpool@0.3.2(convex-helpers@0.1.123(@standard-schema/spec@1.1.0)(convex@1.45.0(react@19.2.8))(hono@4.12.33)(react@19.2.8)(typescript@6.0.3)(zod@3.25.76))(convex@1.45.0(react@19.2.8))':
+    dependencies:
+      convex: 1.45.0(react@19.2.8)
+      convex-helpers: 0.1.123(@standard-schema/spec@1.1.0)(convex@1.45.0(react@19.2.8))(hono@4.12.33)(react@19.2.8)(typescript@6.0.3)(zod@3.25.76)
+
   '@date-fns/tz@1.5.0': {}
 
   '@dotenvx/dotenvx@1.75.1':
@@ -3696,6 +3765,17 @@ snapshots:
 
   '@esbuild/win32-x64@0.27.0':
     optional: true
+
+  '@firecrawl/firecrawl-convex@0.1.1(@standard-schema/spec@1.1.0)(convex@1.45.0(react@19.2.8))(hono@4.12.33)(react@19.2.8)(typescript@6.0.3)(zod@3.25.76)':
+    dependencies:
+      convex: 1.45.0(react@19.2.8)
+      convex-helpers: 0.1.123(@standard-schema/spec@1.1.0)(convex@1.45.0(react@19.2.8))(hono@4.12.33)(react@19.2.8)(typescript@6.0.3)(zod@3.25.76)
+    transitivePeerDependencies:
+      - '@standard-schema/spec'
+      - hono
+      - react
+      - typescript
+      - zod
 
   '@floating-ui/core@1.8.0':
     dependencies:
@@ -4072,6 +4152,8 @@ snapshots:
       react: 19.2.8
 
   '@sindresorhus/merge-streams@4.0.0': {}
+
+  '@stablelib/base64@1.0.1': {}
 
   '@standard-schema/spec@1.1.0': {}
 
@@ -4554,6 +4636,16 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
+  convex-helpers@0.1.123(@standard-schema/spec@1.1.0)(convex@1.45.0(react@19.2.8))(hono@4.12.33)(react@19.2.8)(typescript@6.0.3)(zod@3.25.76):
+    dependencies:
+      convex: 1.45.0(react@19.2.8)
+    optionalDependencies:
+      '@standard-schema/spec': 1.1.0
+      hono: 4.12.33
+      react: 19.2.8
+      typescript: 6.0.3
+      zod: 3.25.76
+
   convex@1.45.0(react@19.2.8):
     dependencies:
       esbuild: 0.27.0
@@ -4860,6 +4952,8 @@ snapshots:
       glob-parent: 5.1.2
       merge2: 1.4.1
       micromatch: 4.0.8
+
+  fast-sha256@1.3.0: {}
 
   fast-uri@3.1.5: {}
 
@@ -5731,6 +5825,11 @@ snapshots:
 
   stackback@0.0.2: {}
 
+  standardwebhooks@1.0.0:
+    dependencies:
+      '@stablelib/base64': 1.0.1
+      fast-sha256: 1.3.0
+
   statuses@2.0.2: {}
 
   std-env@4.2.0: {}
@@ -5767,6 +5866,10 @@ snapshots:
     dependencies:
       has-flag: 3.0.0
     optional: true
+
+  svix@1.99.1:
+    dependencies:
+      standardwebhooks: 1.0.0
 
   systeminformation@5.33.1: {}
 

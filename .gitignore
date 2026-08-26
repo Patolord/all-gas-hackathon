@@ -31,3 +31,6 @@ dist-ssr
 .env
 .env.*
 !.env.example
+
+# Firecrawl CLI output
+.firecrawl
